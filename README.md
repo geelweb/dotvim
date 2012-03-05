@@ -45,6 +45,7 @@ edit ~/.vim/settings.vim to set your settings
 #### Snippets
 
 Mapped on <C-space> (Control space)
+
  * <? : Add file header
  * ro : require_once
  * io : include_once
@@ -71,6 +72,7 @@ Mapped on <C-space> (Control space)
 #### Snippets
 
 Mapped on <C-space> (Control space)
+
  * hd : file header
  * shd : short file header
  * from : from module import
