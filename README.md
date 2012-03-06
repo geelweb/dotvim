@@ -65,12 +65,9 @@ Mapped on &lt;C-space&gt; (Control space)
  * pr :         print\_r debug
  * die :        die debug (with var\_export)
  * class :      class declaration with constructor
- * classN :     class declaration with a constructor with N params (N from 1 to 3)
  * cp :         class property
  * cm :         class method without params
- * cmN :        class method with N params (N from 1 to 3)
  * fn :         function without params
- * fnN :        function with N params (N from 1 to 3)
 
 ### Python files
 
@@ -88,9 +85,7 @@ Mapped on &lt;C-space&gt; (Control space)
  * ew :         endswith
  * try :        try/except
  * fileiter :   open a file and iter on lines
+ * class :      class declaration with init
  * cm :         class method without params
- * cmN :        class method with N params (N from 1 to 3)
- * ccm :        class method with @classmethod
- * scm :        class method with @staticmethod
  * fn :         function without params
 

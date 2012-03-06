@@ -18,12 +18,6 @@ source ~/.vim/settings.vim
 filetype plugin indent on
 syntax on
 
-" paramétrage des templates
-" snippetsEmu conf
-let g:snip_start_tag = "@"
-let g:snip_end_tag = "@"
-let g:snip_set_textmate_cp = 1
-
 let php_folding = 1
 
 set nohlsearch
