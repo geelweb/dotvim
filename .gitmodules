@@ -1,0 +1,9 @@
+[submodule "plugin/php-doc"]
+	path = plugin/php-doc
+	url = git://github.com/vim-scripts/PDV--phpDocumentor-for-Vim.git
+[submodule "plugin/supertab"]
+	path = plugin/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "plugin/snippetsEmu"]
+	path = plugin/snippetsEmu
+	url = git://github.com/vim-scripts/snippetsEmu.git
