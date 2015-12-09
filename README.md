@@ -23,7 +23,7 @@ This config use [Vundle] to manage some plugins.
 
 3. Install Vundle plugins
 
-		`$ vim +PluginInstall +qall`
+		$ vim +PluginInstall +qall
 
 
 
