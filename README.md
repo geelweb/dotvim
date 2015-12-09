@@ -7,7 +7,7 @@ This config use [Vundle] to manage some plugins.
 1. Clone
 
     ```
-    $ git clone https://github.com/geelweb/dotvim.git
+    $ git clone https://github.com/geelweb/dotvim.git ~/.vim
     $ cd ~/.vim
     $ git submodule init
     $ git submodule update
