@@ -6,20 +6,24 @@ This config use [Vundle] to manage some plugins.
 
 1. Clone
 
-    git clone https://github.com/geelweb/dotvim.git
-    cd ~/.vim
-    git submodule init
-    git submodule update
+    ```
+    $ git clone https://github.com/geelweb/dotvim.git
+    $ cd ~/.vim
+    $ git submodule init
+    $ git submodule update
+    ```
 
-2. update / create the `~/.vimrc` file to
+2. update or create the `~/.vimrc` file to
 
+    ````
     if filereadable($HOME . "/.vim/vimrc")
         source $HOME/.vim/vimrc
     endif
+    ````
 
 3. Install Vundle plugins
 
-		vim +PluginInstall +qall
+		`$ vim +PluginInstall +qall`
 
 
 
