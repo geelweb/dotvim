@@ -12,7 +12,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'scrooloose/syntastic'
 Plugin 'jnurmine/Zenburn'
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " End
 call vundle#end()
@@ -40,4 +43,7 @@ autocmd BufWritePre * silent! call DeleteEndLineWhiteSpaces()
 " toggle search hightlight
 noremap <silent> <C-h> :call ToggleBooleanOption('hlsearch')<Cr><esc>
 noremap <silent> <C-l> :call ToggleBooleanOption('number')<Cr><esc>
+
+" airline setup
+set laststatus=2 " display statusline all the time
 
