@@ -40,6 +40,12 @@ endfunction
 
 autocmd BufWritePre * silent! call DeleteEndLineWhiteSpaces()
 
+function ToggleBooleanOption(name)
+    let s:bufname = bufname('%')
+    let s:value = getbufvar(s:bufname, '&' . a:name)
+    call setbufvar(s:bufname, '&' . a:name, !s:value)
+endfunction
+
 " toggle search hightlight
 noremap <silent> <C-h> :call ToggleBooleanOption('hlsearch')<Cr><esc>
 noremap <silent> <C-l> :call ToggleBooleanOption('number')<Cr><esc>
