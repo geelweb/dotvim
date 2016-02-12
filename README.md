@@ -1,91 +1,44 @@
-# Vim config
+# My Vim Config
 
-My vim config
+This config use [Vundle] to manage some plugins.
 
 ## Install
 
-clone in a .vim directory in your home dir and update submodules
+1. Clone
 
-    $ git clone git://github.com/geelweb/dotvim.git ~/.vim
+    ```
+    $ git clone https://github.com/geelweb/dotvim.git ~/.vim
     $ cd ~/.vim
     $ git submodule init
     $ git submodule update
+    ```
 
-update your ~/.vimrc and add
+2. update or create the `~/.vimrc` file to
 
+    ````
     if filereadable($HOME . "/.vim/vimrc")
         source $HOME/.vim/vimrc
     endif
+    ````
 
-edit ~/.vim/settings.vim to set your settings
+3. Install Vundle plugins
 
-## General
+		$ vim +PluginInstall +qall
 
- * Mouse management
- * Indent with 4 spaces
- * Indent automaticly
- * Auto remove end line white spaces
- * Line length set to 80 chars
- * folding and php-folding
 
-### Shorcuts
 
- * &lt;C-h&gt; (Control h): toggle highlighted search
- * &lt;C-l&gt; (Control l): toggle lines number display
- * in visual mode automaticly comments selected lines with
-    * ,/    php comments
-    * ,#    bash/perl/python comments
-    * ,-    sql comments
-    * ,"    vim comments
-    * ,;    ini comments
+[Vundle]:http://github.com/VundleVim/Vundle.vim
 
-## Filetypes
+## Plugins
 
-### PHP files
+ * Python folding [tmhedberg/SimpylFold](https://github.com/tmhedberg/SimpylFold)
+ * Syntax checking [scrooloose/syntastic](https://github.com/scrooloose/syntastic)
+ * Low-contrast color scheme [jnurmine/Zenburn](https://github.com/jnurmine/Zenburn)
+ * Git wrapper [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+ * Tree explorer [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
+ * Status line [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
 
-#### Shorcuts
+## Shortcuts
 
- * &lt;C-d&gt; (Control d): add the PhpDoc comments
-
-#### Snippets
-
-Mapped on &lt;C-space&gt; (Control space)
-
- * &lt;? :      Add file header
- * ro :         require\_once
- * io :         include\_once
- * ss :         $\_SESSION['']
- * gt :         $\_GET['']
- * pt :         $\_POST['']
- * rq :         $\_REQUEST['']
- * foreach :    foreach loop
- * fri :        for i loop
- * frj :        for j loop
- * switch :     switch case
- * pr :         print\_r debug
- * die :        die debug (with var\_export)
- * class :      class declaration with constructor
- * cp :         class property
- * cm :         class method without params
- * fn :         function without params
-
-### Python files
-
-#### Snippets
-
-Mapped on &lt;C-space&gt; (Control space)
-
- * hd :         file header
- * shd :        short file header
- * from :       from module import
- * if :         if test
- * for :        for loop
- * fri :        for i in loop
- * sw :         startswith
- * ew :         endswith
- * try :        try/except
- * fileiter :   open a file and iter on lines
- * class :      class declaration with init
- * cm :         class method without params
- * fn :         function without params
-
+ * `<C-h>` Toggle hlsearch
+ * `<C-l>` Toggle line numbers

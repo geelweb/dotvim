@@ -1,47 +1,55 @@
+set nocompatible
+filetype off
 
-set number          " show lines numbers
-set autoindent      " set autoindenting on
-set smartindent     " set smart autoindenting
-set ignorecase      " set case insensitive matching
-set mouse=a         " enable mouse
-set expandtab       " always spaces not tabs
-set shiftwidth=4    " tab is 4 spaces
-set tabstop=4       " tab is 4 spaces
-set softtabstop=4   " y=tab is 4 spaces
-set tw=80           " set line length to 80 chars max
-set fdm=marker      " folding
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" load settings
-source ~/.vim/settings.vim
+" let Vundle manage Vundle
+Plugin 'gmarik/Vundle.vim'
 
-" activate filetypes and syntax highlighting
+" Include Vundle plugins
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'scrooloose/syntastic'
+Plugin 'jnurmine/Zenburn'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" End
+call vundle#end()
 filetype plugin indent on
+
+"set encoding=utf-8
+
 syntax on
 
-let php_folding = 1
+colorscheme Zenburn
 
+set number
 set nohlsearch
+set ignorecase
 
-" mappe sur la combinaison C-SPACE (NUL)
-imap <unique> <Nul> <Plug>Jumper
+" Remove EOL spaces
+function! DeleteEndLineWhiteSpaces()
+  let line = line(".")
+  exec 'v:^--\s*$:s:\s\+$::e'
+  exec line
+endfunction
 
-source ~/.vim/utils.vim
-
-call SafeSource('~/.vim/shortcuts.vim')
-
-" remove end of lines white spaces when saving
 autocmd BufWritePre * silent! call DeleteEndLineWhiteSpaces()
 
-" ,/ C/C++/C#/Java // comments
-map ,/ :s/^/\/\//<CR>
+function ToggleBooleanOption(name)
+    let s:bufname = bufname('%')
+    let s:value = getbufvar(s:bufname, '&' . a:name)
+    call setbufvar(s:bufname, '&' . a:name, !s:value)
+endfunction
 
-" , #perl,python # comments
-map ,# :s/^/#/<CR>
+" toggle search hightlight
+noremap <silent> <C-h> :call ToggleBooleanOption('hlsearch')<Cr><esc>
+noremap <silent> <C-l> :call ToggleBooleanOption('number')<Cr><esc>
 
-" sql comments
-map ,- :s/^/--/<CR>
-
-" ini comments
-map ," :s/^/" /<CR>
-map ,; :s/^/; /<CR>
+" airline setup
+set laststatus=2 " display statusline all the time
 
