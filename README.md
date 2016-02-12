@@ -29,3 +29,16 @@ This config use [Vundle] to manage some plugins.
 
 [Vundle]:http://github.com/VundleVim/Vundle.vim
 
+## Plugins
+
+ * Python folding [tmhedberg/SimpylFold](https://github.com/tmhedberg/SimpylFold)
+ * Syntax checking [scrooloose/syntastic](https://github.com/scrooloose/syntastic)
+ * Low-contrast color scheme [jnurmine/Zenburn](https://github.com/jnurmine/Zenburn)
+ * Git wrapper [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+ * Tree explorer [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
+ * Status line [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline)
+
+## Shortcuts
+
+ * `<C-h>` Toggle hlsearch
+ * `<C-l>` Toggle line numbers
