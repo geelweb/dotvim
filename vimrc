@@ -25,7 +25,8 @@ filetype plugin indent on
 
 syntax on
 
-colorscheme Zenburn
+set t_Co=256
+colorscheme zenburn
 
 set number
 set nohlsearch
